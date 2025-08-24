@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBBS Patient and Community Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .year-category {
+            margin-bottom: 20px;
+        }
+        .year-category h2 {
+            color: #2c3e50;
+        }
+        .topics {
+            margin-left: 20px;
+            display: none;
+        }
+        h2 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>MBBS Patient and Community Problems</h1>
+
+    <div class="year-category" id="year-2">
+        <h2>Year 2</h2>
+        <ul class="topics">
+            <li><a href="chapters/year2/problem1.html">Patient and Community Problem 1</a></li>
+            <li><a href="chapters/year2/problem2.html">Patient and Community Problem 2</a></li>
+            <li><a href="chapters/year2/problem3.html">Patient and Community Problem 3</a></li>
+            <li><a href="chapters/year2/problem4.html">Patient and Community Problem 4</a></li>
+            <li><a href="chapters/year2/problem5.html">Patient and Community Problem 5</a></li>
+            <li><a href="chapters/year2/problem6.html">Patient and Community Problem 6</a></li>
+            <li><a href="chapters/year2/problem7.html">Patient and Community Problem 7</a></li>
+            <li><a href="chapters/year2/problem8.html">Patient and Community Problem 8</a></li>
+            <li><a href="chapters/year2/problem9.html">Patient and Community Problem 9</a></li>
+            <li><a href="chapters/year2/problem10.html">Patient and Community Problem 10</a></li>
+        </ul>
+    </div>
+
+    <div class="year-category" id="year-3">
+        <h2>Year 3</h2>
+        <ul class="topics">
+            <!-- Topics for Year 3 will be inserted here -->
+        </ul>
+    </div>
+
+    <div class="year-category" id="year-4">
+        <h2>Year 4</h2>
+        <ul class="topics">
+            <!-- Topics for Year 4 will be inserted here -->
+        </ul>
+    </div>
+
+    <div class="year-category" id="year-5">
+        <h2>Year 5</h2>
+        <ul class="topics">
+            <!-- Topics for Year 5 will be inserted here -->
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const year2Header = document.querySelector('#year-2 h2');
+            const year2Topics = document.querySelector('#year-2 .topics');
+
+            year2Header.addEventListener('click', () => {
+                if (year2Topics.style.display === 'none' || !year2Topics.style.display) {
+                    year2Topics.style.display = 'block';
+                } else {
+                    year2Topics.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
