@@ -22,6 +22,13 @@
         h2 {
             cursor: pointer;
         }
+        .subtopics {
+            display: none;
+            margin-left: 20px;
+        }
+        h3 {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -30,16 +37,51 @@
     <div class="year-category" id="year-2">
         <h2>Year 2</h2>
         <ul class="topics">
-            <li><a href="chapters/year2/problem1.html">Patient and Community Problem 1</a></li>
-            <li><a href="chapters/year2/problem2.html">Patient and Community Problem 2</a></li>
-            <li><a href="chapters/year2/problem3.html">Patient and Community Problem 3</a></li>
-            <li><a href="chapters/year2/problem4.html">Patient and Community Problem 4</a></li>
-            <li><a href="chapters/year2/problem5.html">Patient and Community Problem 5</a></li>
-            <li><a href="chapters/year2/problem6.html">Patient and Community Problem 6</a></li>
-            <li><a href="chapters/year2/problem7.html">Patient and Community Problem 7</a></li>
-            <li><a href="chapters/year2/problem8.html">Patient and Community Problem 8</a></li>
-            <li><a href="chapters/year2/problem9.html">Patient and Community Problem 9</a></li>
-            <li><a href="chapters/year2/problem10.html">Patient and Community Problem 10</a></li>
+            <li>
+                <h3>1-10</h3>
+                <ul class="subtopics">
+                    <li><a href="chapters/year2/problem1.html">Patient and Community Problem 1</a></li>
+                    <li><a href="chapters/year2/problem2.html">Patient and Community Problem 2</a></li>
+                    <li><a href="chapters/year2/problem3.html">Patient and Community Problem 3</a></li>
+                    <li><a href="chapters/year2/problem4.html">Patient and Community Problem 4</a></li>
+                    <li><a href="chapters/year2/problem5.html">Patient and Community Problem 5</a></li>
+                    <li><a href="chapters/year2/problem6.html">Patient and Community Problem 6</a></li>
+                    <li><a href="chapters/year2/problem7.html">Patient and Community Problem 7</a></li>
+                    <li><a href="chapters/year2/problem8.html">Patient and Community Problem 8</a></li>
+                    <li><a href="chapters/year2/problem9.html">Patient and Community Problem 9</a></li>
+                    <li><a href="chapters/year2/problem10.html">Patient and Community Problem 10</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>11-20</h3>
+                <ul class="subtopics">
+                    <li><a href="chapters/year2/problem11.html">Patient and Community Problem 11</a></li>
+                    <li><a href="chapters/year2/problem12.html">Patient and Community Problem 12</a></li>
+                    <li><a href="chapters/year2/problem13.html">Patient and Community Problem 13</a></li>
+                    <li><a href="chapters/year2/problem14.html">Patient and Community Problem 14</a></li>
+                    <li><a href="chapters/year2/problem15.html">Patient and Community Problem 15</a></li>
+                    <li><a href="chapters/year2/problem16.html">Patient and Community Problem 16</a></li>
+                    <li><a href="chapters/year2/problem17.html">Patient and Community Problem 17</a></li>
+                    <li><a href="chapters/year2/problem18.html">Patient and Community Problem 18</a></li>
+                    <li><a href="chapters/year2/problem19.html">Patient and Community Problem 19</a></li>
+                    <li><a href="chapters/year2/problem20.html">Patient and Community Problem 20</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>21-30</h3>
+                <ul class="subtopics">
+                    <li><a href="chapters/year2/problem21.html">Patient and Community Problem 21</a></li>
+                    <li><a href="chapters/year2/problem22.html">Patient and Community Problem 22</a></li>
+                    <li><a href="chapters/year2/problem23.html">Patient and Community Problem 23</a></li>
+                    <li><a href="chapters/year2/problem24.html">Patient and Community Problem 24</a></li>
+                    <li><a href="chapters/year2/problem25.html">Patient and Community Problem 25</a></li>
+                    <li><a href="chapters/year2/problem26.html">Patient and Community Problem 26</a></li>
+                    <li><a href="chapters/year2/problem27.html">Patient and Community Problem 27</a></li>
+                    <li><a href="chapters/year2/problem28.html">Patient and Community Problem 28</a></li>
+                    <li><a href="chapters/year2/problem29.html">Patient and Community Problem 29</a></li>
+                    <li><a href="chapters/year2/problem30.html">Patient and Community Problem 30</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
@@ -75,6 +117,18 @@
                 } else {
                     year2Topics.style.display = 'none';
                 }
+            });
+
+            const subcategoryHeaders = document.querySelectorAll('#year-2 h3');
+            subcategoryHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const subtopics = header.nextElementSibling;
+                    if (subtopics.style.display === 'none' || !subtopics.style.display) {
+                        subtopics.style.display = 'block';
+                    } else {
+                        subtopics.style.display = 'none';
+                    }
+                });
             });
         });
     </script>
